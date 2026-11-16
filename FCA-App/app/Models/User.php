@@ -39,9 +39,8 @@ class User extends Authenticatable
         return $this->role === 'pelanggan';
     }
 
-    // Aktifkan relasi ini nanti setelah kamu membuat Model Pelanggan:
-    // public function pelanggan()
-    // {
-    //     return $this->hasOne(Pelanggan::class, 'id_user');
-    // }
+    public function pelanggan()
+    {
+        return $this->hasOne(Pelanggan::class, 'id_user');
+    }
 }
